@@ -1,5 +1,5 @@
-class Helium
-  def self.hi
-    puts "Hello World!"
+class Argon
+  def self.hi(x)
+    puts x
   end
 end

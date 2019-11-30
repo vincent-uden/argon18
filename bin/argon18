@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'argon18'
+puts Argon.hi(ARGV[0])
