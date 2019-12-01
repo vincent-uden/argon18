@@ -1,4 +1,27 @@
 #!/usr/bin/env ruby
 
+$VERBOSE = nil
+args = ARGV
+ARGV = []
+
 require 'argon18'
-puts Argon.hi(ARGV[0])
+
+if args.include? "-h" or args.include? "--help"
+  puts(
+"
+Usage: argon18 [DIRECTORY]
+Start a web server in a given directory.
+
+With no DIRECTORY the current working directory is used.
+
+ -h, --help   display this message and exit
+"
+)
+else
+  project_root = "."
+  if args[0]
+    project_root = args[0]
+  end
+  Argon.run_app project_root
+end
+
