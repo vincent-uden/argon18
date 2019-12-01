@@ -9,4 +9,8 @@ class ArgonApp < Sinatra::Base
   get '/' do
     slim :index
   end
+
+  get '*', provides: 'html' do
+    slim params[:splat].first.to_sym
+  end
 end
