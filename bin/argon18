@@ -19,9 +19,13 @@ With no DIRECTORY the current working directory is used.
 )
 else
   project_root = "."
-  if args[0]
-    project_root = args[0]
+  if args[-1]
+    project_root = args[-1]
   end
-  Argon.run_app project_root
+  if args.include? "-E" or args.include? "--export"
+    Argon.gen_static_html project_root
+  else
+    Argon.run_app project_root
+  end
 end
 

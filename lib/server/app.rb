@@ -7,10 +7,15 @@ class ArgonApp < Sinatra::Base
   end
 
   get '/' do
+    puts (slim :index)
     slim :index
   end
 
   get '*', provides: 'html' do
-    slim params[:splat].first.to_sym
+    if params[:splat].first == "/favicon.ico"
+      ""
+    else
+      slim params[:splat].first.to_sym
+    end
   end
 end
