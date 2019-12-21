@@ -18,7 +18,7 @@ Planned features:
 - [RubyGems Page](https://rubygems.org/gems/argon18)
 
 ## How to use Argon18
-An argon project is expected to to have to folders, *public* and *views*. Public will contain the static files such as the websites images, javascript files, etc. and views will contain the Slim files. An example project could look like this.
+An argon project is expected to have two folders, *public* and *views*. Public will contain the static files such as the websites images, javascript files, etc. and views will contain the Slim files. An example project could look like this.
 ```
 +-- project
     +-- public
