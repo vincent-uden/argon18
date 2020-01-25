@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'argon18'
-  s.version = '0.1.1'
+  s.version = '0.1.2'
   s.executables << 'argon18'
   s.date = '2019-11-30'
   s.summary = "Argon 18 ⚛️"

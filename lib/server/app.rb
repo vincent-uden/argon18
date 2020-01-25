@@ -12,10 +12,6 @@ class ArgonApp < Sinatra::Base
   end
 
   get '*', provides: 'html' do
-    if params[:splat].first == "/favicon.ico"
-      ""
-    else
-      slim params[:splat].first.to_sym
-    end
+    slim params[:splat].first.to_sym
   end
 end
