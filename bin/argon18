@@ -6,6 +6,8 @@ ARGV = []
 
 require 'argon18'
 
+flags = ["-h", "--help", "-E"]
+
 if args.include? "-h" or args.include? "--help"
   puts(
 "
@@ -15,11 +17,12 @@ Start a web server in a given directory.
 With no DIRECTORY the current working directory is used.
 
  -h, --help   display this message and exit
+ -E           export the site to static html files (will be placed in project_root/output)
 "
 )
 else
   project_root = "."
-  if args[-1]
+  if args[-1] && !(flags.include? args[-1])
     project_root = args[-1]
   end
   if args.include? "-E" or args.include? "--export"
