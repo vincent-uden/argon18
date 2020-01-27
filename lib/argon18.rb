@@ -24,7 +24,7 @@ class Argon
     ENV['project_root'] = File.expand_path(project_root)
     ENV['views_path'] = "views"
     ENV['public_path'] = "public"
-    ENV['output_path'] = "output/"
+    ENV['output_path'] = ENV['project_root'] + "/" + "output/"
 
     FileUtils.mkdir_p ENV['output_path']
 
