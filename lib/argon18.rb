@@ -16,7 +16,7 @@ class Argon
     ArgonApp.config
 
     Dir.chdir(ENV['project_root']) do
-      Rack::Handler::WEBrick.run(ArgonApp, Port: 9292)
+      Rack::Handler::WEBrick.run(ArgonApp, {Port: 9292, BindAddress: '0.0.0.0'})
     end
   end
 
