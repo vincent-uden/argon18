@@ -11,6 +11,6 @@ Gem::Specification.new do |s|
   s.homepage = "https://rubygems.org/gems/argon18"
   s.license = "MIT"
 
-  s.add_runtime_dependency 'sinatra', '~> 2.0', '>= 2.0.4'
+  s.add_runtime_dependency 'sinatra', '>= 2.0.4', '< 4'
   s.add_runtime_dependency 'slim', '~> 4.0', '>= 4.0.1'
 end
